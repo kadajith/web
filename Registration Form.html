@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Registration Form</title>
+<script type = "text/javascript">
+function display()
+{
+alert("Number of Elements in this page "+document.getElementById("form1").length);
+}
+</script>
+</head>
+<body>
+<h1 align="center"> Students Registration Form </h1>
+<form id = "form1">
+<table border = "0" align="center">
+<tr>
+<td>Name</td>
+<td><input type = "text" value = "firstname" /></td>
+<td><input type = "text" value = "Lastname" /></td>
+</tr>
+<tr>
+<td>Date of Birth</td>
+<td><select name = "date"><option value = "7" >11</td>
+<td><select name = "month"><option value = "November">November</td>
+<td><select name = "year"><option value = "1991">1991</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input type = "radio" name = "gender"/>Male</td>
+<td><input type = "radio" name = "gender"/>Female</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td><input type = "text" ></td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea name = "address"></textarea></td>
+</tr>
+<tr>
+<td>Language you known</td>
+<td><input type = "checkbox" /> Tamil </td>
+<td><input type = "checkbox" /> English </td>
+<td><input type = "checkbox" /> Others </td>
+</tr>
+<tr>
+<td><input type = "button" value = "Submit" /></td><td></td>
+<td><input type = "button" value = "Check no of elements" onclick = "display()" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

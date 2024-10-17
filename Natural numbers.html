@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type = "text/javascript">
+var num = window.prompt("Enter the number:","");
+var n = parseInt(num);
+result = sumnaturalno(n);
+//window.alert("The sum of " + n + " natural number is" + result);
+document.write("<br><b>The sum of " + n + " natural number is " + result+"<b>");
+function sumnaturalno(n)
+{
+var i;
+var sum = 0;
+document.write("Natural numbers are:");
+for(i = 1;i <= n; i++)
+{
+document.write(i+" ");
+sum = sum + i;
+}
+return (sum);
+}
+</script>
+</head>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Personal Information</title>
+<script type = "text/javascript">
+function validate()
+{
+if(document.myForm.Name.value == "")
+{
+alert("Please Provide Your Name");
+document.myForm.Name.focus();
+return false;
+}
+if(document.myForm.Email.value == "")
+{
+alert("Please Provide Your Email ID");
+document.myForm.Email.focus();
+return false;
+}
+if((document.myForm.Phone.value == "") || (document.myForm.Phone.value.length != 10) )
+{
+alert("Please Provide a valid Phone Number");
+document.myForm.Email.focus();
+return false;
+}
+if(document.myForm.Country.value == "-1")
+{
+alert("Please Provide Your Country Name");
+return false;
+}
+return true;
+}
+function validateEmail()
+{
+var emailID = document.myForm.Email.value;
+atpos = emailID.indexOf("@");
+dotpos = emailID.lastIndexOf(".");
+if(atpos < 1 || (dotpos - atpos < 2))
+{
+alert("Please Enter Correct Email ID");
+document.myForm.Email.focus();
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body >
+<h1 align = "center"> Personal Information </h1>
+<form name = "myForm" onsubmit = "return(validate());" >
+<table cellspacing = "2" cellpadding = "2" border = "1" align = "center">
+<tr>
+<td>Name</td>
+<td><input type = "text" name = "Name" /></td>
+</tr>
+<tr>
+<td>Email ID</td>
+<td><input type = "text" name = "Email" onchange = "validateEmail();"/></td>
+</tr>
+<tr>
+<td>Phone Number</td>
+<td><input type = "text" name = "Phone"/></td>
+</tr>
+<tr>
+<td>Country</td>
+<td><select name = "Country" >
+<option value = "-1" selected> [Choose Yours]</option>
+<option value = "1" >INDIA</option>
+<option value = "2" >USA</option>
+<option value = "3" >UK</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan = "2" align = "center"><input type = "submit" value = "Submit" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
